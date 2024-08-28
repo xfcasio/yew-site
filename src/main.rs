@@ -37,7 +37,7 @@ fn CoolButton() -> Html {
 #[function_component]
 fn TabBar() -> Html {
     let tabs_state = use_state(|| [true, false, false, false]);
-    let tabs = ["Pictures", "Videos", "Chats", "Followers"];
+    let tabs = ["Feed", "Chat", "Following", "Followers"];
     let update_bar = |status: [bool; 4]| {
          let tabs_state = tabs_state.clone();
          Callback::from(move |_| tabs_state.set(status))
